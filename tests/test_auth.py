@@ -40,4 +40,4 @@ def test_intentional_fail():
     # Code backend trả về 401 (vì user này không có trong DB), 
     # nhưng chúng ta cố tình assert nó phải là 200 để test bị Fail.
     response = client.post("/login?email=khong_ton_tai@example.com&password=123")
-    assert response.status_code == 200 
+    assert response.status_code == 401
