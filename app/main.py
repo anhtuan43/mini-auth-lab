@@ -4,7 +4,8 @@ import jwt
 import datetime
 
 app = FastAPI()
-SECRET_KEY = "main_secret_key_999"
+# SECRET_KEY = "my_super_secret_key"
+SECRET_KEY = "feature_secret_key_456"
 security = HTTPBearer()
 
 # API Đăng nhập
