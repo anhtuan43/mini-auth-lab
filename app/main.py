@@ -8,7 +8,7 @@ SECRET_KEY = "my_super_secret_key"
 security = HTTPBearer()
 
 # API Đăng nhập
-@app.post("/login")
+@app.post("/login", status_code=201)
 def login(email: str, password: str):
     if email == "admin@example.com" and password == "admin123":
         # Tạo token hết hạn sau 30 phút
