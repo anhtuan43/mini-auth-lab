@@ -22,3 +22,7 @@ def test_me_with_fake_token():
     headers = {"Authorization": "Bearer fake_token_12345"}
     response = client.get("/me", headers=headers)
     assert response.status_code == 401
+
+def test_login_success():
+    response = client.post("/login?email=admin@example.com&password=admin123")
+    assert response.status_code == 201 # Cố tình sửa thành 201 để test báo lỗi
